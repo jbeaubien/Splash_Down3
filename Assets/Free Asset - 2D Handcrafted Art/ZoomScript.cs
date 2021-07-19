@@ -23,10 +23,14 @@ public class ZoomScript : MonoBehaviour
 
     private bool facingRight = true;
 
+    //animation
+    private Animator thisAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        thisAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -44,6 +48,15 @@ public class ZoomScript : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         //vertical = Input.GetAxis("Jump");
         vertical = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown("a") || Input.GetKeyDown("w") || Input.GetKeyDown("d") || Input.GetKeyDown("s"))
+        {
+            thisAnimator.SetBool("swimming", true);
+        }
+        if (Input.GetKeyUp("a") || Input.GetKeyUp("w") || Input.GetKeyUp("d") || Input.GetKeyUp("s"))
+        {
+            thisAnimator.SetBool("swimming", false);
+        }
+
 
         if (Input.GetMouseButton(0) && canDash == true)
         {
