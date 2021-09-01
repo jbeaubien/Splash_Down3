@@ -48,9 +48,11 @@ public class ZoomScript : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         //vertical = Input.GetAxis("Jump");
         vertical = Input.GetAxisRaw("Vertical");
+        thisAnimator.SetFloat("newFloat", horizontal);
         if (Input.GetKeyDown("a") || Input.GetKeyDown("w") || Input.GetKeyDown("d") || Input.GetKeyDown("s"))
         {
             thisAnimator.SetBool("swimming", true);
+            
         }
         if (Input.GetKeyUp("a") || Input.GetKeyUp("w") || Input.GetKeyUp("d") || Input.GetKeyUp("s"))
         {

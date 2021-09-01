@@ -1,0 +1,20 @@
+racing game mode
+
+mario cart esk
+checkpoints
+shoots and ladders- angles tha allow you to par coring stuff- jump off stuff to cut corners
+things that can let you cut corners over people ahead of you- can treat it as a puzzle
+fire powerup that make you faster
+damaging powerups
+make characters more stylized and less long
+
+first step: 
+make race mode
+multipler 
+controls set up
+multi character selection-pun
+
+
+second step: 
+make power ups
+procedural generation- splunky style
