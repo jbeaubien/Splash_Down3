@@ -11,7 +11,7 @@ namespace Photon.Pun.Demo.Asteroids
         [Header("Login Panel")]
         public GameObject LoginPanel;
 
-        public InputField PlayerNameInput;
+        //public InputField PlayerNameInput;
 
         [Header("Selection Panel")]
         public GameObject SelectionPanel;
@@ -49,8 +49,9 @@ namespace Photon.Pun.Demo.Asteroids
 
             cachedRoomList = new Dictionary<string, RoomInfo>();
             roomListEntries = new Dictionary<string, GameObject>();
+
+            // PlayerNameInput.text = "Player " + Random.Range(1000, 10000);
             
-            PlayerNameInput.text = "Player " + Random.Range(1000, 10000);
         }
 
         #endregion
@@ -244,7 +245,9 @@ namespace Photon.Pun.Demo.Asteroids
 
         public void OnLoginButtonClicked()
         {
-            string playerName = PlayerNameInput.text;
+            //string playerName = PlayerNameInput.text;
+            string playerName = GameObject.Find("DoNotDestroyGO").GetComponent<Save>().currentCharacter;
+
 
             if (!playerName.Equals(""))
             {

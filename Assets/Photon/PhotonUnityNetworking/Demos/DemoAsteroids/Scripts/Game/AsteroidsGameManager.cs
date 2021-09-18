@@ -182,11 +182,11 @@ namespace Photon.Pun.Demo.Asteroids
         private void StartGame()
         {
             Debug.Log("StartGame!");
-
+            CharacterName = GameObject.Find("DoNotDestroyGO").GetComponent<Save>().currentCharacter;
             // on rejoin, we have to figure out if the spaceship exists or not
             // if this is a rejoin (the ship is already network instantiated and will be setup via event) we don't need to call PN.Instantiate
 
-            
+
             float angularStart = (360.0f / PhotonNetwork.CurrentRoom.PlayerCount) * PhotonNetwork.LocalPlayer.GetPlayerNumber();
             float x = 20.0f * Mathf.Sin(angularStart * Mathf.Deg2Rad);
             float z = 20.0f * Mathf.Cos(angularStart * Mathf.Deg2Rad);
